@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import L from 'leaflet'; // Leaflet is a popular library for maps
 
-const Map: React.FC = () => {
+const Maps: React.FC = () => {
   useEffect(() => {
     const map = L.map('map').setView([51.505, -0.09], 13); // Adjust the center and zoom as needed
 
@@ -16,4 +16,4 @@ const Map: React.FC = () => {
   return <div id="map" style={{ height: '500px' }}></div>;
 };
 
-export default Map;
+export default Maps;

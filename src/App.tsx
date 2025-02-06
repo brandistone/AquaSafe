@@ -5,6 +5,8 @@ import FloodPrediction from './components/FloodPrediction';
 
 import SettingsPage from './components/WeatherData';
 import DrainageManagement from './components/DrainageManagement';
+import Maps from './components/Maps';
+import WeatherData from './components/WeatherData';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +17,8 @@ const App: React.FC = () => {
           <Route path="/flood-prediction" element={<FloodPrediction />} />
           <Route path="/drainage" element={<DrainageManagement />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/map" element={<Maps />} />
+          <Route path='/weather-data' element={<WeatherData />} />
         </Routes>
       </div>
     </Router>

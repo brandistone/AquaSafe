@@ -1,10 +1,36 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from 'react'; // Add this import
+import ReactDOM from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './pages/Home';
+import DrainageManagement from './components/DrainageManagement';
+import Maps from './components/Maps';
+import WeatherData from './components/WeatherData';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+
+  {
+    path: "/drainage",
+    element: <DrainageManagement />,
+  },
+
+  {
+    path: "/map",
+    element: <Maps />,
+  },
+
+  {
+    path: "/weather-data",
+    element: <WeatherData />
+  },
+
+]);
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
